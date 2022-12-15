@@ -13,19 +13,14 @@ def monkey_business(rounds, divisor):
                 continue
             elif line[0] == "Monkey":
                 monkey = []
-                continue
             elif line[0] == "Starting":
                 monkey.append([int(item.strip(",")) for item in line[2:]])
-                continue
             elif line[0] == "Operation:":
                 monkey.append(" ".join([x for x in line[3:]]))
-                continue
             elif line[0] == "Test:":
                 monkey.append(int(line[3]))
-                continue
             elif line[1] == "true:":
                 monkey.append([int(line[5])])
-                continue
             elif line[1] == "false:":
                 monkey[3].append(int(line[5]))
                 monkey.append(0)
